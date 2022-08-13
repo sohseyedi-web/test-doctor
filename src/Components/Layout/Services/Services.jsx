@@ -7,9 +7,9 @@ const Services = () => {
     <section className="services" dir="rtl">
       <div className="container services-container">
         <div className="services-container__title">
-          ارایه میدیم
-          <h1>دکتردکتر</h1>
           خدماتی که ما در
+          <h1>دکتردکتر</h1>
+          ارایه میدیم
         </div>
         <div className="services-container__box">
           <div className="services-container__box-item">

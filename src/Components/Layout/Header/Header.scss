@@ -3,25 +3,38 @@
   &-container {
     display: flex;
     justify-content: space-between;
+    color: #252525;
 
     &__left {
       text-align: right;
       flex: 0.5;
       margin-top: 5.5rem;
 
-      &-title{
+      &-title {
         font-size: 2rem;
         font-weight: bold;
       }
-      &-subtitle{
-        font-size: .95rem;
+      &-subtitle {
+        font-size: 0.95rem;
         margin: 1.5rem 0;
       }
-      &-btn{
-        padding: .5rem 1.2rem;
-        background-color: #252525;
-        color: #fff;
-        border-radius: .5rem;
+      &-btn {
+        padding: 0.5rem 1.2rem;
+        background-color: #1b67a7;
+        color: #f2f4f5;
+        border-radius: 0.5rem;
+        font-size: 1.2rem;
+        transition: all 0.4s ease-in-out;
+
+        span {
+          margin-right: 0.5rem;
+        }
+
+        &:hover {
+          background-color: #acacac;
+          color: #252525;
+          transition: all 0.4s ease-in-out;
+        }
       }
     }
     &__right {
