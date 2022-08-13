@@ -1,18 +1,22 @@
-import React, { useState } from 'react'
-import Navbar from './Navbar/Navbar';
-import Header from './Header/Header';
-import Footer from './Footer/Footer';
+import React, { useState } from "react";
+import Navbar from "./Navbar/Navbar";
+import Header from "./Header/Header";
+import Footer from "./Footer/Footer";
+import Services from "./Services/Services";
+import Contact from "./Contact/Contact";
 
 const Layout = () => {
   const [lang, setLang] = useState(false);
 
   return (
     <>
-        <Navbar lang={lang} setLang={setLang}/>
-        <Header/>
-        <Footer/>
+      <Navbar lang={lang} setLang={setLang} />
+      <Header />
+      <Services />
+      <Contact />
+      <Footer />
     </>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;
