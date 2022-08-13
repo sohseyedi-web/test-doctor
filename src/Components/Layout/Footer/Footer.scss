@@ -76,5 +76,35 @@
         }
       }
     }
+
+    @media screen and (max-width: 992px) {
+      flex-direction: column;
+      padding: 2rem 0;
+
+      &__left {
+        text-align: center;
+        &-items {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 1rem;
+          width: 100%;
+        }
+      }
+    }
+    @media screen and (max-width: 600px) {
+      flex-direction: column;
+      padding: 2rem 0;
+
+      &__left {
+        &-title{
+          text-align: right;
+        }
+        &-items {
+          flex-direction: column;
+          margin-bottom: 1rem;
+          width: 100%;
+        }
+      }
+    }
   }
 }

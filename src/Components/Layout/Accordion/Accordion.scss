@@ -80,11 +80,15 @@
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 992px) {
     &-content {
       width: 100%;
 
       &__list {
+
+        &.active-list{
+          height: 230px;
+        }
         &-body {
           padding: 0.2rem 1.3rem;
           font-size: 0.9rem;
