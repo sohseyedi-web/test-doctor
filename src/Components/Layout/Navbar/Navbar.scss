@@ -8,13 +8,58 @@
     align-items: center;
     justify-content: space-between;
 
+    h2 {
+      margin: 0;
+    }
     &__links {
       display: flex;
       align-items: center;
 
       &-lang {
+        width: 100px;
+        height: 40px;
+        position: relative;
+        background-color: #f2f4f5;
+        color: #252525;
+        margin-left: 2rem;
+        text-align: center;
+        border-radius: 0.5rem;
+        cursor: pointer;
         display: flex;
-        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &__btn {
+          width: 100%;
+          border-radius: 0.5rem;
+          color: #252525;
+          cursor: pointer;
+          text-align: center;
+          transition: all 0.4s ease-in-out;
+        }
+        &__items {
+          position: absolute;
+          text-align: center;
+          content: "";
+          width: 100%;
+          border-bottom-left-radius: 0.5rem;
+          border-bottom-right-radius: 0.5rem;
+          top: 85%;
+          right: 0;
+          padding: 1rem 0;
+          background-color: #f2f4f5;
+          transition: all 0.4s ease-in-out;
+
+          &-text {
+            cursor: pointer;
+            transition: all 0.4s ease-in-out;
+
+            &:hover {
+              transition: all 0.4s ease-in-out;
+              color: #1b67a7;
+            }
+          }
+        }
       }
       &-auth {
         padding: 0.5rem 1.2rem;
