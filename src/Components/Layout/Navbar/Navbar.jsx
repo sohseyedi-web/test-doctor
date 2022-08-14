@@ -1,74 +1,33 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
+import { MdOutlineLanguage } from "react-icons/md";
 import "./Navbar.scss";
+import { useModal } from "../../../Context/ModalProvider";
+import Modal from "../../../Common/Modal/Modal";
 
-const Navbar = ({ lang, setLang }) => {
-  const [isActive, setIsActive] = useState(false);
-
+const Navbar = () => {
+  const { openModal } = useModal();
   return (
-    <nav className="navs" dir={lang ? "ltr" : "rtl"}>
+    <nav className="navs" dir="rtl">
       <div className="container navs-container">
-        {lang ? (
-          <>
-            <h2>Logo</h2>
-            <div className="navs-container__links">
-              <Link to={"/"} className={"navs-container__links-auth"}>
-                User Account
-              </Link>
-              <div className="navs-container__links-lang">
-                <div
-                  className="navs-container__links-lang__btn"
-                  onClick={() => setIsActive(!isActive)}
-                >
-                  English
-                </div>
-                {isActive && (
-                  <div className="navs-container__links-lang__items">
-                    <div
-                      className="navs-container__links-lang__items-text"
-                      onClick={() => {
-                        setLang(false);
-                        setIsActive(false);
-                      }}
-                    >
-                      Persian
-                    </div>
-                  </div>
-                )}
-              </div>
-            </div>
-          </>
-        ) : (
-          <>
-            <h2>لوگو</h2>
-            <div className="navs-container__links">
-              <div className="navs-container__links-lang">
-                <div
-                  className="navs-container__links-lang__btn"
-                  onClick={() => setIsActive(!isActive)}
-                >
-                  فارسی
-                </div>
-                {isActive && (
-                  <div className="navs-container__links-lang__items">
-                    <div
-                      className="navs-container__links-lang__items-text"
-                      onClick={() => {
-                        setLang(true);
-                        setIsActive(false);
-                      }}
-                    >
-                      انگلیسی
-                    </div>
-                  </div>
-                )}
-              </div>
-              <Link to={"/"} className="navs-container__links-auth">
-                حساب کاربری
-              </Link>
-            </div>
-          </>
-        )}
+        <div className="navs-container__right">
+          <h3 className="navs-container__right-logo">دکتردکتر</h3>
+          <div className="navs-container__right-links">
+            <Link to={"/"}>خانه</Link>
+            <Link to={"/"}>بلاگ</Link>
+            <Link to={"/"}>درباره ما</Link>
+            <Link to={"/"}>تماس با ما</Link>
+          </div>
+        </div>
+        <div className="navs-container__left">
+          <button onClick={openModal} className="navs-container__left-auth">
+            ورود / ثبت نام
+          </button>
+          <Modal />
+          <Link to={"/"} className="navs-container__left-lang">
+            English
+            <MdOutlineLanguage size={24} />
+          </Link>
+        </div>
       </div>
     </nav>
   );

@@ -1,11 +1,14 @@
+import { Route, Routes } from "react-router-dom";
 import Layout from "./Components/Layout/Layout";
-
+import ModalProvider from "./Context/ModalProvider";
 
 function App() {
   return (
-    <>
-      <Layout/>
-    </>
+    <ModalProvider>
+      <Routes>
+        <Route path="/" element={<Layout />} />
+      </Routes>
+    </ModalProvider>
   );
 }
 
